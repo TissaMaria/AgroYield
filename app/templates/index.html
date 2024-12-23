@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Crop Yield Prediction</h1>
+<form action="/predict" method="POST">
+    <!-- District Name Input -->
+    <label for="district_name">District Name:</label>
+    <input type="text" id="district_name" name="district_name" required>
+
+    
+
+    <!-- Season Input -->
+    <label for="season">Season:</label>
+    <input type="text" id="season" name="season" required>
+
+    <!-- Crop Name Input -->
+    <label for="crop_name">Crop Name:</label>
+    <input type="text" id="crop_name" name="crop_name" required>
+
+    <!-- Area Input (Decimal) -->
+    <label for="area">Area (in hectares):</label>
+    <input type="number" step="any" id="area" name="area" required>
+
+
+    <!-- Nitrogen Input (Decimal) -->
+    <label for="n">Nitrogen (N) Content:</label>
+    <input type="number" step="any" id="n" name="n" required>
+
+    <!-- Phosphorus Input (Decimal) -->
+    <label for="p">Phosphorus (P) Content:</label>
+    <input type="number" step="any" id="p" name="p" required>
+
+    <!-- Potassium Input (Decimal) -->
+    <label for="k">Potassium (K) Content:</label>
+    <input type="number" step="any" id="k" name="k" required>
+
+    <!-- Temperature Input (Decimal) -->
+    <label for="temperature">Temperature (°C):</label>
+    <input type="number" step="any" id="temperature" name="temperature" required>
+
+    <!-- Humidity Input (Decimal) -->
+    <label for="humidity">Humidity (%):</label>
+    <input type="number" step="any" id="humidity" name="humidity" required>
+
+    <!-- pH Input (Decimal) -->
+    <label for="ph">pH:</label>
+    <input type="number" step="any" id="ph" name="ph" required>
+
+    <!-- Rainfall Input (Decimal) -->
+    <label for="rainfall">Rainfall (mm):</label>
+    <input type="number" step="any" id="rainfall" name="rainfall" required>
+
+    <!-- Submit Button -->
+    <button type="submit">Predict</button>
+</form>
+{% endblock %}
