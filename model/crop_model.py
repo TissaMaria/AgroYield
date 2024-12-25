@@ -5,12 +5,12 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import re
 
-crop_data = pd.read_csv(r"C:\Users\Tissa Maria\OneDrive\Desktop\Crop-Yield-Prediction-in-India-using-ML\crop_production.csv")
+crop_data = pd.read_csv("data\Crop-Yield-Prediction-in-India-using-ML\crop_production.csv")
 
 crop_data['Crop'] = crop_data['Crop'].apply(lambda x: re.sub(r'[^a-zA-Z\s]', '', str(x).lower()))  # Ensure 'x' is a string
 crop_data['Crop'] = crop_data['Crop'].apply(lambda x: x.split('/')[0].strip())  # Remove anything after '/' and strip whitespace
 
-crop_recommendation_data = pd.read_csv(r"C:\Users\Tissa Maria\OneDrive\Desktop\Crop-Yield-Prediction-in-India-using-ML\Crop_recommendation.csv")
+crop_recommendation_data = pd.read_csv("data\Crop-Yield-Prediction-in-India-using-ML\Crop_recommendation.csv")
 
 crop_recommendation_data['label'] = crop_recommendation_data['label'].apply(lambda x: re.sub(r'[^a-zA-Z\s]', '', str(x).lower()))  # Ensure 'x' is a string
 crop_recommendation_data['label'] = crop_recommendation_data['label'].apply(lambda x: x.split('/')[0].strip())  # Remove anything after '/' and strip whitespace
