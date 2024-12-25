@@ -1,49 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {margin: 0;}
-
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-ul.topnav li a.active {background-color: #04AA6D;}
-
-ul.topnav li.right {float: right;}
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/home.css">
+    
 </head>
 <body>
+    <div class="background-container">
+        <img class="background-image" src="static/Images/pexels-pixabay-51947.jpg" alt="Background">
+        <ul class="topnav">
+            <li class="agroyield">AgroYield</li>
+            <li><a href="{{ url_for('main.home') }}">Home</a></li>
+            <li><a href="{{ url_for('main.index') }}">Predict</a></li>
+            <li><a href="{{ url_for('main.resources') }}">Resources</a></li>
+            <li ><a href="{{ url_for('main.contact') }}">Contact</a></li>
+        </ul>
+        <div class="home-page">
+            <div class="header">AI-Powered Insights for Your Best Harvest Yet.</div>
+            <div class="desc">A smart, AI-driven platform designed to empower farmers by providing accurate crop yield predictions based on their inputs. </div>
+        </div>
+        <div class="predict">
+            <a href="{{ url_for('main.index') }}">
+                <button class="predict-btn">
+                    Predict <span class="arrow">→</span>
+                </button>
+            </a>
+        </div>
+        
 
-<ul class="topnav">
-  <li><a class="active" href="home.html">Home</a></li>
-  <li><a href="base.html">Predict</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li class="right"><a href="#about">About</a></li>
-</ul>
-
-
+    </div>
+    <div class="why_us">
+        <div class="why_us_header">Why Should you Choose AgroYield?</div>
+        <div class="why_us_boxes">
+            <div class="why_us_box">
+                <img src="static\Images\grass_52dp_003D0A_FILL0_wght400_GRAD0_opsz48.png" class="why_us_icon"></img>
+                <div class="why_us_title">Accurate Crop Yield Predictions</div>
+                <div class="why_us_content">
+                    We use Random Forest algorithms to analyze diverse factors like soil nutrients, weather, and crop details. This ensures precise yield forecasts, helping farmers make informed decisions and optimize agricultural outcomes.
+                </div>
+            </div>
+            <div class="why_us_box">
+                <img src="static\Images\agriculture_52dp_003D0A_FILL0_wght400_GRAD0_opsz48.png" class="why_us_icon"></img>
+                <div class="why_us_title">Empowering Farmers with Insights</div>
+                <div class="why_us_content">
+                    Our tool enables farmers to anticipate yields by integrating district-specific data and seasonal trends. This empowers proactive planning for resource allocation, boosting productivity and reducing risks effectively.
+                </div>
+            </div>
+            <div class="why_us_box">
+                <img src="static\Images\description_52dp_003D0A_FILL0_wght400_GRAD0_opsz48.png" class="why_us_icon"></img>
+                <div class="why_us_title">Guided Data Collection Resources</div>
+                <div class="why_us_content">
+                    We provide clear resources to assist farmers in accurately collecting and inputting data. Step-by-step instructions ensure reliable inputs, enhancing prediction accuracy and making the process user-friendly for all.
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="footer_logo">
+                <h1>AgroYield</h1>
+                <p>
+                    Our platform is dedicated to helping farmers and agricultural professionals thrive by providing access to valuable resources and expert advice.
+                </p>
+            </div>
+            <div class="footer_links">
+                <div class="footer_column">
+                    <h3>Navigate</h3>
+                    <ul>
+                        <li><a href="{{ url_for('main.home') }}">Home</a></li>
+                        
+                        <li><a href="{{ url_for('main.index') }}">Predict</a></li>
+                        <li><a href="{{ url_for('main.resources') }}">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">agroyield@example.com</a></li>
+                        <li><a href="tel:+12075550119">00000 00000</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p>© 2024 AgroYield</p>
+            <div>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a> 
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>

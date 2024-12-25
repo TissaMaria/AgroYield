@@ -7,6 +7,13 @@ main = Blueprint('main', __name__)
 def home():
     return render_template('home.html')
 
+@main.route('/resources')
+def resources():
+    return render_template('resources.html')
+
+@main.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 @main.route('/')
 def index():
