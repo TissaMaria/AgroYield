@@ -1,0 +1,5 @@
+reduced_crop_data.csv
+model/crop_yield_model.pkl
+model/crop_yield_rf_model.pkl
+data/cleaned_merged_data.csv
+

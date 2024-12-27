@@ -116,8 +116,26 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-
+.prediction_result{
+  text-align: center;
+  margin-bottom: 30px;
+}
 button:hover {
+  background-color: #03431a;
+}
+.button {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 17px;
+  padding: 10px;
+  background-color: #0c5c30;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
   background-color: #03431a;
 }
 

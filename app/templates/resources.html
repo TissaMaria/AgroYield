@@ -7,20 +7,114 @@
     <link rel="stylesheet" href="/static/resources.css">
 </head>
 <body>
-    <div class="header-predict" style="background-image: url('{{ url_for('static', filename='Images/pexels-stephanthem-753869.jpg') }}');">
+    <div class="header-predict" style="background-image: url('{{ url_for('static', filename='Images/pexels-duc-nguyen-400576574-28457326.jpg') }}');">
     
     
     <ul class="topnav">
         <li class="agroyield">AgroYield</li>
-        <li><a class="active" href="{{ url_for('main.home') }}">Home</a></li>
+        <li><a href="{{ url_for('main.home') }}">Home</a></li>
         <li><a href="{{ url_for('main.index') }}">Predict</a></li>
         <li><a href="{{ url_for('main.resources') }}">Resources</a></li>
         <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
       </ul>
     <header>
-        <h1 class="crop-yield">Crop Yield Prediction</h1>
+        <h1 class="crop-yield">Resources</h1>
     </header>
     </div>
+    <div class="faq_section">
+      <button class="accordion">How can I measure the nitrogen levels in my soil?</button>
+      <div class="panel">
+          <p>To measure nitrogen levels in your soil, you can utilize soil testing services provided by various laboratories across India. These tests analyze soil samples to determine nutrient content, including nitrogen, and offer recommendations for optimal fertilizer use. <br>  
+          <a href="https://soilhealth.dac.gov.in/home">Locate Your Nearest Soil Testing Laboratory</a></p>
+      </div>
+        
+      <button class="accordion">What are the best practices for maintaining optimal phosphorus levels in soil?</button>
+      <div class="panel">
+          <p>
+            Regular Soil Testing: Assess phosphorus content periodically.<br>
+            Balanced Fertilization: Apply phosphorus fertilizers based on soil test recommendations.<br>
+            Organic Amendments: Incorporate compost or manure to enhance phosphorus availability.<br>
+            Erosion Control: Implement measures to prevent soil erosion, which can deplete phosphorus.
+          </p>
+      </div>
+  
+      <button class="accordion">How do I determine the potassium content in my soil?</button>
+      <div class="panel">
+          <p>Determining soil potassium content involves: <br> 
+          Soil Sampling: Collect soil samples from different field locations. <br>
+          Laboratory Analysis: Submit samples to accredited soil testing laboratories for analysis. <br>
+          Interpreting Results: Use the analysis to guide potassium fertilizer application. <br>
+          <a href="https://soilhealth.dac.gov.in/home">Locate Soil Testing Laboratory</a></p>
+      </div>
+  
+      <button class="accordion">Why is monitoring soil pH important for farming?</button>
+      <div class="panel">
+          <p>Monitoring soil pH is crucial because: <br>
+          Nutrient Availability: pH affects the availability of nutrients to plants. <br>
+          Microbial Activity: Soil microorganisms function optimally within specific pH ranges. <br>
+          Crop Suitability: Different crops thrive at different pH levels. <br>
+          <a href="https://soilhealth.dac.gov.in/home">Soil Health Card Scheme</a></p>
+      </div>
+  
+      <button class="accordion">How can I adjust soil pH if it’s too acidic or too alkaline?</button>
+      <div class="panel">
+          <p>To adjust soil pH: <br>
+          For Acidic Soils: Apply lime (limestone) to raise pH. <br>
+          For Alkaline Soils: Incorporate sulfur or gypsum to lower pH. <br>
+          Consultation: Seek advice from local agricultural extension services for appropriate application rates. <br>
+          <a href="https://www.nmsa.gov.in">Soil Health Management Guidelines</a></p>
+      </div>
+  
+      <button class="accordion">How do temperature and humidity levels affect soil health?</button>
+      <div class="panel">
+          <p>Temperature and humidity influence: <br>
+          Microbial Activity: Optimal ranges promote beneficial microbial processes. <br>
+          Nutrient Cycling: Affects the decomposition of organic matter and nutrient availability. <br>
+          Soil Moisture: Humidity impacts evaporation rates and soil moisture retention. <br>
+          <a href="https://mausam.imd.gov.in">Agro-Meteorological Services</a></p>
+      </div>
+  
+      <button class="accordion">What is the ideal temperature range for healthy soil?</button>
+      <div class="panel">
+          <p>Ideal soil temperatures vary by crop, but generally: <br>
+          Cool-Season Crops: 15-18°C (59-64°F) <br>
+          Warm-Season Crops: 24-30°C (75-86°F) <br>
+          <a href="https://mausam.imd.gov.in">Agro-Meteorological Advisory Services</a></p>
+      </div>
+  
+      <button class="accordion">How does rainfall influence soil fertility and crop yield?</button>
+      <div class="panel">
+          <p>Rainfall impacts: <br>
+          Soil Moisture: Essential for nutrient dissolution and uptake. <br>
+          Nutrient Leaching: Excessive rainfall can wash away nutrients. <br>
+          Erosion: Heavy rains may lead to soil erosion, reducing fertility. <br>
+          <a href="https://nraa.gov.in">National Rainfed Area Authority</a></p>
+      </div>
+  
+      <button class="accordion">Are there tools available to monitor soil moisture levels effectively?</button>
+      <div class="panel">
+          <p>Yes, tools include: <br>
+          Soil Moisture Sensors: Devices that provide real-time moisture data. <br>
+          Tensiometers: Measure soil water tension to assess moisture availability. <br>
+          Remote Sensing: Satellite-based tools for large-scale moisture monitoring. <br>
+          <a href="https://www.icar.org.in">ICAR - Indian Institute of Soil and Water Conservation</a></p>
+      </div>
+  
+      <button class="accordion">How can I prepare my soil to retain nutrients during heavy rainfall?</button>
+      <div class="panel">
+          <p>To retain nutrients: <br>
+          Organic Matter Addition: Incorporate compost to improve soil structure. <br>
+          Cover Cropping: Plant cover crops to reduce erosion and nutrient loss. <br>
+          Contour Plowing: Plow along contours to slow water runoff. <br>
+          <a href="https://www.india.gov.in">Soil Health Management - National Portal of India</a></p>
+      </div>
+  </div>
+  
+
+
+
+
+
     
     <footer class="footer">
         <div class="footer_content">
@@ -63,5 +157,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
 </body>
 </html>

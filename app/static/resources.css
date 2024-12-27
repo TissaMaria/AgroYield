@@ -81,7 +81,36 @@ ul.topnav li a:hover {
     position: relative;
     top: 48px;
 }
+.faq_section{
+  font-family: "Poppins";
+  width:70%;
+  margin:40px auto;
+}
+.accordion {
+  background-color: #eee;
+  color: #032d02;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.4s;
+}
 
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
 
 
 

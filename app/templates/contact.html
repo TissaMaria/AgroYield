@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/contact.css">
 </head>
 <body>
-    <div class="header-predict" style="background-image: url('{{ url_for('static', filename='Images/pexels-stephanthem-753869.jpg') }}');">
+    <div class="header-predict" style="background-image: url('{{ url_for('static', filename='Images/pexels-pixabay-326082.jpg') }}');">
     
     
     <ul class="topnav">
@@ -18,9 +18,27 @@
         <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
       </ul>
     <header>
-        <h1 class="crop-yield">Crop Yield Prediction</h1>
+        <h1 class="crop-yield">Get in Touch</h1>
     </header>
     </div>
+    <div class="contact-section">
+        
+        <div class="contact-item">
+            <div class="icon-circle">
+                <img src="static\Images\call_54dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" class="icon_contact_us"></img>
+            </div>
+            <h3>PHONE</h3>
+            <p>00000 00000<br>24/7 Service: 00000 00000</p>
+        </div>
+        <div class="contact-item">
+            <div class="icon-circle">
+                <img src="static\Images\mail_54dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" class="icon_contact_us"></img>
+            </div>
+            <h3>EMAIL</h3>
+            <p>info@agroyield.com<br>support@agroyield.com</p>
+        </div>
+    </div>
+    
     
     <footer class="footer">
         <div class="footer_content">
@@ -63,5 +81,6 @@
             </div>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

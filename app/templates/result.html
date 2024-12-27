@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="prediction_result">
 <h2>Prediction Result</h2>
 <p>The predicted yield is: {{ prediction }} t/ha</p>
-<a href="/">Go back</a>
+<a href="/" class="button">Go back</a>
+</div>
 {% endblock %}
